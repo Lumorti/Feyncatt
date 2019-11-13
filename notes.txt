@@ -1,0 +1,17 @@
+robotic cat
+
+3 motors per leg
+2 motors in torso
+2 motors for head
+total = 16 servos
+
+need:
+lion battery for lightweight-ness
+smallest arduino possible
+buck converter
+lion charging circuit
+wireless qi pad circuit
+16 SG90R servos
+a bunch of 3d printed parts
+arduino gyro
+arduino camera
