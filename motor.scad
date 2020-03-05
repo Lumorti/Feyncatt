@@ -140,7 +140,7 @@ module servoConnectStraight(){
     
 }
 
-module servConnectTwist(){
+module servoConnectTwist(){
     
     armLength = 50;
     connectorLength = 50;
@@ -157,21 +157,20 @@ module servConnectTwist(){
     connectorOffset = 3;
     connectorInnerWidth = 25;
     
-    translate([-armLength+30,+6-armWidth/2,-innerHeight/2+11])  difference(){
+    translate([-10+-armLength+30,+6-armWidth/2,-innerHeight/2+11])  difference(){
         
         color("red") 
         union(){
             
-            translate([0,0,0]) cube([armLength, armWidth, armThickness]);
-            translate([0,0,innerHeight]) cube([armLength, armWidth, armThickness]);
-            translate([-armThickness,0,0]) cube([armThickness, armWidth, innerHeight+armThickness]);
-            
+            translate([15,30,0]) rotate([0,0,-90]){
+                translate([0,0,0]) cube([armLength, armWidth, armThickness]);
+                translate([0,0,innerHeight]) cube([armLength, armWidth, armThickness]);
+                translate([-armThickness,0,0]) cube([armThickness, armWidth, innerHeight+armThickness]);
+            }
+                
             translate([armLength/2-connectorInnerWidth/2-armThickness+connectorOffset,0,innerHeight]) cube([armThickness,armWidth,connectorLength]);
             translate([armLength/2+connectorInnerWidth/2-armThickness+connectorOffset,0,innerHeight]) cube([armThickness,armWidth,connectorLength]);
             
-            
-
-
         };
         
         for (i = [0:numHoles-1]){translate([armLength-i*holesEvery-holeFromEdge,armWidth/2,innerHeight]) cylinder(r=holeSize,h=20,center=true);}
@@ -233,22 +232,56 @@ module leg(){
 
         translate([-2*hipToKnee-20,4,-2.5]) foot();
 
-        translate([67.5,13,-1]) rotate([90,0,-90]) {
-            servo();
-            servoMountFixed();
-            servConnectTwist();
+        translate([67.5,0,-1]) rotate([90,0,-90]) {
+            rotate([0,0,90]) {
+                servo();
+                servoMountFixed();
+            }
+            servoConnectTwist();
         }
         
     }
    
 }
 
-betweenLegs = 150;
-catLength = 400;
+module bodyPlate(){
+    
+    thickness = 8;
+    width = 120;
+    length = 130;
+    
+    translate([0,0,0]) cube([width,length,thickness]);
+    translate([0,0,8]) cube([4,40,15]);
+    translate([-2,5,12.5]) rotate([0,90,0]) cylinder(r=2.5,h=10);
+    translate([-2,35,12.5]) rotate([0,90,0]) cylinder(r=2.5,h=10);
+    
+}
 
-translate([0,0,0]) leg();
-translate([betweenLegs,0,0]) mirror([1,0,0])  leg();
-translate([betweenLegs,catLength,0]) mirror([1,0,0])  leg();
-translate([0,catLength,0])leg();
+module body(){
+ 
+    translate([15,-17.5,50]) bodyPlate();
+    translate([135,320,50]) rotate([0,0,180]) bodyPlate();
+    translate([100,150,50]) rotate([90,0,0]) rotate([0,90,0]) {servo(); servoMountFixed();}
+    
+    
+}
+
+betweenLegs = 150;
+catLength = 300;
+
+//translate([0,0,0]) leg();
+//translate([betweenLegs,0,0]) mirror([1,0,0])  leg();
+//translate([betweenLegs,catLength,0]) mirror([1,0,0])  leg();
+//translate([0,catLength,0])leg();
+//translate([0,0,0]) body();
+
+translate([0,0,0]) bodyPlate();
+translate([200,0,0]) servo();
+translate([300,0,0]) foot();
+translate([400,0,0]) servoConnectTwist();
+translate([600,0,0]) servoConnectStraight();
+translate([700,0,0]) servoMountFixed();
+
+
 
 
