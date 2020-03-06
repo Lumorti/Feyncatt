@@ -6,12 +6,10 @@ robotic cat
 total = 16 servos
 
 need:
-lion battery for lightweight-ness
-smallest arduino possible
+4xAA battery pack
+arduino 
 buck converter
-lion charging circuit
-wireless qi pad circuit
-16 SG90R servos
+16 SG90 servos
 a bunch of 3d printed parts
 arduino gyro
 arduino camera
