@@ -1,0 +1,7 @@
+Two main sections of code:
+1) neural net trained to recognise certain hand signs
+ - follow
+ - sleep
+ - wait
+ - explore
+2) code that performs the task specified above by calling functions like "moveForward(10cm)", "turn(-10degrees)", also processes incoming cam data and runs through sobel filter to determine edges, distances etc.
