@@ -15413,10 +15413,10 @@ M84 X Y E ;Disable all steppers but Z
 M82 ;absolute extrusion mode
 M104 S0
 ;End of Gcode
-;SETTING_3 {"extruder_quality": ["[general]\\nversion = 4\\nname = Low Quality #
-;SETTING_3 2\\ndefinition = creality_base\\n\\n[metadata]\\ntype = quality_chang
-;SETTING_3 es\\nquality_type = low\\nposition = 0\\n\\n[values]\\n\\n"], "global
-;SETTING_3 _quality": "[general]\\nversion = 4\\nname = Low Quality #2\\ndefinit
-;SETTING_3 ion = creality_ender3\\n\\n[metadata]\\ntype = quality_changes\\nqual
-;SETTING_3 ity_type = low\\n\\n[values]\\nadhesion_type = brim\\nsupport_enable 
-;SETTING_3 = True\\n\\n"}
+;SETTING_3 {"global_quality": "[general]\\nversion = 4\\nname = Low Quality #2\\
+;SETTING_3 ndefinition = creality_ender3\\n\\n[metadata]\\ntype = quality_change
+;SETTING_3 s\\nquality_type = low\\n\\n[values]\\nadhesion_type = brim\\nsupport
+;SETTING_3 _enable = True\\n\\n", "extruder_quality": ["[general]\\nversion = 4\
+;SETTING_3 \nname = Low Quality #2\\ndefinition = creality_base\\n\\n[metadata]\
+;SETTING_3 \ntype = quality_changes\\nquality_type = low\\nposition = 0\\n\\n[va
+;SETTING_3 lues]\\n\\n"]}
