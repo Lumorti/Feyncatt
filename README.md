@@ -6,14 +6,14 @@ An attempt at a robotic quadruped. At the current stage it's fully printed, able
 
 Schrödinger was too obvious a name.
 
+<img src="https://github.com/lumorti/feyncatt/raw/master/images/model.png" width="512" height="512">
+
 TODO:
  - attempt a basic walk cycle
  - reprint the feet to be more efficient
  - make the walk cycle more fluid
  - allow turning
  - allow environmental mapping
-
-![Model of Feyncatt](https://github.com/lumorti/feyncatt/raw/master/images/model.png?s=256 "Model of Feyncatt")
 
 ### Requirements
 
