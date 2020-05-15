@@ -13,6 +13,8 @@ TODO:
  - allow turning
  - allow environmental interaction
 
+![Model of Feyncatt](https://github.com/lumorti/feyncatt/raw/master/images/model.png "Model of Feyncatt")
+
 ### Requirements
 
  - a 3D printer, doesn't need to be a fancy one
@@ -32,7 +34,7 @@ TODO:
  - many 1" pin header jumper cables for connecting modules ([here](https://www.bitsbox.co.uk/index.php?main_page=product_info&cPath=225_233&products_id=2909))
  - some wire rated for 5 A as the main power rail ([here](https://www.amazon.co.uk/PsmGoods%C2%AE-Gauge-Silicone-Flexible-Rubber-18/dp/B074299GG5/ref=sr_1_6?dchild=1&keywords=18+awg+wire&qid=1589523305&sr=8-6))
  - switch ([here](https://www.bitsbox.co.uk/index.php?main_page=product_info&cPath=116_136&products_id=911))
- - M4 machine screws/nuts, M2 machine screws/nuts
+ - M4 machine screws/nuts, M3 machine screws/nuts, M2 machine screws/nuts
  
 ### Printed Parts Required
 
